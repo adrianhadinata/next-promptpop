@@ -1,4 +1,7 @@
 import "@styles/globals.css";
+
+import Nav from "@components/Nav";
+import Provider from "@components/Provider";
 import { Children } from "react";
 
 export const metadata = {
@@ -14,7 +17,10 @@ const RootLayout = ({ children }) => {
           {/* background  */}
           <div className="gradient"></div>
         </div>
-        <div className="app">{children}</div>
+        <div className="app">
+          <Nav></Nav>
+          {children}
+        </div>
       </body>
     </html>
   );
